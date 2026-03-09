@@ -20,14 +20,9 @@ def information_gain(y, split_mask):
     # Write code here
     ent = _entropy(y)
 
-    y_left = []
-    y_right = []
-    for i in range(len(split_mask)):
-        if split_mask[i]:
-            y_left.append(y[i])
-        else:
-            y_right.append(y[i])
-
+    y_left = y[split_mask]
+    y_right = y[~split_mask]  
+    
     ent_left = _entropy(y_left)
     ent_right = _entropy(y_right)
 
