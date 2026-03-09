@@ -18,7 +18,6 @@ def gini_impurity(y_left, y_right):
     gini_left = 1
     gini_right = 1
 
-    print(nl, nr)
     for i in range(len(leftel)):
         gini_left -= (leftct[i]/nl) ** 2
         
